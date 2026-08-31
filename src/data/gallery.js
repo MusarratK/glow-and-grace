@@ -37,7 +37,7 @@ export const galleryItems = [
     category: "facial",
     title: "24K Gold Facial Glow",
     subtitle: "Deep Cleansing & Collagen Boost",
-    image: "https://images.unsplash.com/photo-1512290900673-70020473d09e?auto=format&fit=crop&q=80&w=1000",
+    image: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&q=80&w=1000",
   },
   {
     id: "g5",
@@ -128,6 +128,6 @@ export const beforeAfterTransformations = [
     title: "Instant Pigmentation Clear & Glow",
     description: "Diamond polishing and hydration mask cleared dullness, leaving porcelain glass skin.",
     beforeImg: "https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&q=80&w=600",
-    afterImg: "https://images.unsplash.com/photo-1512290900673-70020473d09e?auto=format&fit=crop&q=80&w=600"
+    afterImg: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&q=80&w=600"
   }
 ];

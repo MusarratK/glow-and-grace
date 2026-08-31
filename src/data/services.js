@@ -99,7 +99,7 @@ export const servicesData = [
     description: "Hydrating facial treatment formulated to replenish moisture, even skin tone, and restore natural elasticity.",
     startingPrice: 899,
     duration: "45 mins",
-    image: "https://images.unsplash.com/photo-1512290900673-70020473d09e?auto=format&fit=crop&q=80&w=800",
+    image: "https://images.unsplash.com/photo-1516914943479-89db7d9ae7f2?auto=format&fit=crop&q=80&w=800",
     popular: false
   },
   {
@@ -110,7 +110,7 @@ export const servicesData = [
     description: "Luxury facial enriched with 24k gold foil dust to boost collagen, reduce pigmentation, and provide golden glow.",
     startingPrice: 1499,
     duration: "60 mins",
-    image: "https://images.unsplash.com/photo-1512290900673-70020473d09e?auto=format&fit=crop&q=80&w=800",
+    image: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&q=80&w=800",
     popular: true
   },
   {
@@ -132,7 +132,7 @@ export const servicesData = [
     description: "Advanced microdermabrasion diamond facial for deep skin resurfacing, pore tightening, and glass skin finish.",
     startingPrice: 1999,
     duration: "75 mins",
-    image: "https://images.unsplash.com/photo-1512290900673-70020473d09e?auto=format&fit=crop&q=80&w=800",
+    image: "https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&q=80&w=800",
     popular: true
   },
   {
@@ -143,7 +143,7 @@ export const servicesData = [
     description: "Rejuvenating treatment with hyaluronic acid and collagen boosters to firm fine lines and lift dull skin.",
     startingPrice: 2499,
     duration: "75 mins",
-    image: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&q=80&w=800",
+    image: "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=80&w=800",
     popular: false
   },
 
@@ -270,7 +270,7 @@ export const servicesData = [
     description: "Smooth chocolate or Rica painless wax for complete arm hair removal and gentle tan clearance.",
     startingPrice: 349,
     duration: "30 mins",
-    image: "https://images.unsplash.com/photo-1512290900673-70020473d09e?auto=format&fit=crop&q=80&w=800",
+    image: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&q=80&w=800",
     popular: false
   },
   {

@@ -27,7 +27,7 @@ const Bridal = ({ onOpenBooking }) => {
       title: "Complete Pre-Bridal Package",
       desc: "3-Month skin prep schedule: Gold Facials, Body Polishing, Rica Waxing, Hair Spa & Gel Nails.",
       price: "₹14,999",
-      img: "https://images.unsplash.com/photo-1512290900673-70020473d09e?auto=format&fit=crop&q=80&w=600"
+      img: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&q=80&w=600"
     }
   ];
 

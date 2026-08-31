@@ -1,0 +1,310 @@
+/* ==========================================================================
+   GLOW & GRACE BEAUTY STUDIO - LUXURY DESIGN SYSTEM & STYLESHEET
+   ========================================================================== */
+
+:root {
+  /* Brand Color Palette */
+  --color-primary: #d4a373;          /* Subtle Warm Gold */
+  --color-primary-dark: #b8860b;     /* Deep Gold Accent */
+  --color-primary-light: #f4e8c1;    /* Light Gold Glow */
+  --color-secondary: #9c6644;        /* Rich Rose Brown */
+  --color-accent-pink: #f7d6cd;      /* Soft Blush Pink */
+  --color-blush-light: #fdf5f2;     /* Subtle Blush Cream */
+  --color-nude: #f9f3ef;             /* Soft Nude Background */
+  --color-cream: #fffdfa;            /* Pure Warm Cream */
+  --color-white: #ffffff;
+  --color-dark: #2c1f1d;             /* Deep Espresso / Dark Brown */
+  --color-dark-muted: #5c4642;       /* Soft Muted Espresso */
+  --color-border: #ebdcd5;           /* Delicate Rose Border */
+  --color-gold-gradient: linear-gradient(135deg, #d4af37 0%, #edc967 50%, #c59b27 100%);
+  --color-blush-gradient: linear-gradient(135deg, #fdf5f2 0%, #f7d6cd 100%);
+  --color-dark-gradient: linear-gradient(135deg, #2c1f1d 0%, #4a3532 100%);
+
+  /* Typography */
+  --font-heading: 'Playfair Display', Georgia, serif;
+  --font-body: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Shadows */
+  --shadow-sm: 0 4px 12px rgba(44, 31, 29, 0.04);
+  --shadow-md: 0 10px 30px rgba(44, 31, 29, 0.08);
+  --shadow-lg: 0 20px 40px rgba(44, 31, 29, 0.12);
+  --shadow-gold: 0 10px 25px rgba(212, 175, 55, 0.25);
+
+  /* Transitions & Radii */
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-full: 9999px;
+  --transition-fast: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Base Resets */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-nude);
+  color: var(--color-dark);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--color-dark);
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+
+button {
+  font-family: var(--font-body);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: none;
+  transition: var(--transition-normal);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-nude);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-accent-pink);
+  border-radius: var(--radius-full);
+  border: 2px solid var(--color-nude);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary);
+}
+
+/* Container Utilities */
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.container-narrow {
+  max-width: 900px;
+}
+
+.section-padding {
+  padding: 5rem 0;
+}
+
+@media (max-width: 768px) {
+  .section-padding {
+    padding: 3.5rem 0;
+  }
+}
+
+/* Luxury Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 0.9rem 2rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  border-radius: var(--radius-full);
+  text-transform: uppercase;
+  transition: var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.btn-primary {
+  background: var(--color-dark);
+  color: var(--color-cream);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-primary:hover {
+  background: var(--color-secondary);
+  color: var(--color-white);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+}
+
+.btn-gold {
+  background: var(--color-gold-gradient);
+  color: var(--color-dark);
+  font-weight: 600;
+  box-shadow: var(--shadow-gold);
+}
+
+.btn-gold:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(212, 175, 55, 0.4);
+}
+
+.btn-outline {
+  border: 2px solid var(--color-dark);
+  color: var(--color-dark);
+  background: transparent;
+}
+
+.btn-outline:hover {
+  background: var(--color-dark);
+  color: var(--color-cream);
+  transform: translateY(-3px);
+}
+
+.btn-whatsapp {
+  background: #25D366;
+  color: #ffffff;
+  font-weight: 600;
+  box-shadow: 0 8px 20px rgba(37, 211, 102, 0.3);
+}
+
+.btn-whatsapp:hover {
+  background: #1eb857;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(37, 211, 102, 0.4);
+}
+
+.btn-sm {
+  padding: 0.6rem 1.3rem;
+  font-size: 0.85rem;
+}
+
+.btn-lg {
+  padding: 1.1rem 2.5rem;
+  font-size: 1.05rem;
+}
+
+/* Glassmorphism Card Style */
+.glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(235, 220, 213, 0.8);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+}
+
+/* Section Header Typography */
+.section-title-wrapper {
+  text-align: center;
+  margin-bottom: 3.5rem;
+  position: relative;
+}
+
+.section-subtitle {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--color-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.section-title {
+  font-size: 2.75rem;
+  color: var(--color-dark);
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: var(--color-primary);
+  margin: 0.8rem auto 0 auto;
+  border-radius: var(--radius-full);
+}
+
+.section-desc {
+  max-width: 650px;
+  margin: 1rem auto 0 auto;
+  color: var(--color-dark-muted);
+  font-size: 1.05rem;
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+}
+
+/* Keyframe Animations */
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
+  50% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.animate-float {
+  animation: floatSlow 4s ease-in-out infinite;
+}
+
+.badge-luxury {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.9rem;
+  background: var(--color-blush-gradient);
+  border: 1px solid var(--color-accent-pink);
+  color: var(--color-secondary);
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* Hide Netlify Drawer / Feedback Badge if injected */
+#netlify-badge,
+[data-netlify-drawers],
+iframe[title*="Netlify"],
+.netlify-badge {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+

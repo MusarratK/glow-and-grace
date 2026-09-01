@@ -23,9 +23,9 @@ const GalleryGrid = ({ limit = 0 }) => {
             onClick={() => setActiveCategory(cat.id)}
             style={{
               ...styles.filterBtn,
-              backgroundColor: activeCategory === cat.id ? '#2c1f1d' : 'transparent',
-              color: activeCategory === cat.id ? '#fffdfa' : '#2c1f1d',
-              borderColor: activeCategory === cat.id ? '#2c1f1d' : '#ebdcd5',
+              backgroundColor: activeCategory === cat.id ? 'var(--color-dark)' : 'var(--color-input-bg)',
+              color: activeCategory === cat.id ? 'var(--color-nude)' : 'var(--color-dark)',
+              borderColor: activeCategory === cat.id ? 'var(--color-dark)' : 'var(--color-border)',
             }}
           >
             {cat.label}

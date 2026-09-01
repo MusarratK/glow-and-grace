@@ -63,39 +63,39 @@ const Packages = ({ onSelectPackage }) => {
               <tbody>
                 <tr>
                   <td style={styles.td}>Express Cleanup / Facial</td>
-                  <td style={styles.td}><Check size={16} color="#9c6644" /> Cleanup</td>
-                  <td style={styles.td}><Check size={16} color="#9c6644" /> Gold / Pearl Facial</td>
-                  <td style={styles.td}><Check size={16} color="#9c6644" /> Diamond Polish Facial</td>
+                  <td style={styles.td}><Check size={16} color="#d4af37" /> Cleanup</td>
+                  <td style={styles.td}><Check size={16} color="#d4af37" /> Gold / Pearl Facial</td>
+                  <td style={styles.td}><Check size={16} color="#d4af37" /> Diamond Polish Facial</td>
                 </tr>
                 <tr>
                   <td style={styles.td}>Eyebrows & Upper Lip Threading</td>
-                  <td style={styles.td}><Check size={16} color="#9c6644" /> Included</td>
-                  <td style={styles.td}><Check size={16} color="#9c6644" /> Included</td>
-                  <td style={styles.td}><Check size={16} color="#9c6644" /> Full Face Threading</td>
+                  <td style={styles.td}><Check size={16} color="#d4af37" /> Included</td>
+                  <td style={styles.td}><Check size={16} color="#d4af37" /> Included</td>
+                  <td style={styles.td}><Check size={16} color="#d4af37" /> Full Face Threading</td>
                 </tr>
                 <tr>
                   <td style={styles.td}>Manicure & Pedicure</td>
-                  <td style={styles.td}><Check size={16} color="#9c6644" /> Classic</td>
-                  <td style={styles.td}><Check size={16} color="#9c6644" /> Aromatherapy</td>
-                  <td style={styles.td}><Check size={16} color="#9c6644" /> Spa + Gel Extensions</td>
+                  <td style={styles.td}><Check size={16} color="#d4af37" /> Classic</td>
+                  <td style={styles.td}><Check size={16} color="#d4af37" /> Aromatherapy</td>
+                  <td style={styles.td}><Check size={16} color="#d4af37" /> Spa + Gel Extensions</td>
                 </tr>
                 <tr>
                   <td style={styles.td}>Waxing Treatments</td>
                   <td style={styles.td}>-</td>
-                  <td style={styles.td}><Check size={16} color="#9c6644" /> Full Hand & Leg</td>
-                  <td style={styles.td}><Check size={16} color="#9c6644" /> Full Body Rica Wax</td>
+                  <td style={styles.td}><Check size={16} color="#d4af37" /> Full Hand & Leg</td>
+                  <td style={styles.td}><Check size={16} color="#d4af37" /> Full Body Rica Wax</td>
                 </tr>
                 <tr>
                   <td style={styles.td}>Haircare & Styling</td>
                   <td style={styles.td}>-</td>
-                  <td style={styles.td}><Check size={16} color="#9c6644" /> Hair Spa</td>
-                  <td style={styles.td}><Check size={16} color="#9c6644" /> Extensions & Styling</td>
+                  <td style={styles.td}><Check size={16} color="#d4af37" /> Hair Spa</td>
+                  <td style={styles.td}><Check size={16} color="#d4af37" /> Extensions & Styling</td>
                 </tr>
                 <tr>
                   <td style={styles.td}>HD Makeup Application</td>
                   <td style={styles.td}>-</td>
                   <td style={styles.td}>-</td>
-                  <td style={styles.td}><Check size={16} color="#9c6644" /> Full HD Bridal Makeup</td>
+                  <td style={styles.td}><Check size={16} color="#d4af37" /> Full HD Bridal Makeup</td>
                 </tr>
               </tbody>
             </table>
@@ -134,25 +134,25 @@ const styles = {
   table: {
     width: '100%',
     borderCollapse: 'collapse',
-    backgroundColor: '#fffdfa',
+    backgroundColor: 'var(--color-card-solid)',
     borderRadius: '16px',
     overflow: 'hidden',
-    border: '1px solid #ebdcd5',
+    border: '1px solid var(--color-border)',
     boxShadow: 'var(--shadow-md)',
   },
   th: {
     fontFamily: "'Playfair Display', serif",
     fontSize: '1.05rem',
-    backgroundColor: '#2c1f1d',
-    color: '#d4af37',
+    backgroundColor: 'var(--color-dark)',
+    color: 'var(--color-nude)',
     padding: '1.2rem 1.5rem',
     textAlign: 'left',
   },
   td: {
     padding: '1.1rem 1.5rem',
-    borderBottom: '1px solid #ebdcd5',
+    borderBottom: '1px solid var(--color-border)',
     fontSize: '0.9rem',
-    color: '#2c1f1d',
+    color: 'var(--color-dark)',
   },
 };
 

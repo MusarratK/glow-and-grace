@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import { Sparkles, Menu, X, Phone, Calendar } from 'lucide-react';
 import { businessData } from '../data/business';
+import ThemeToggle from './ThemeToggle';
 
 const Navbar = ({ onOpenBooking }) => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -60,8 +61,8 @@ const Navbar = ({ onOpenBooking }) => {
         style={{
           ...styles.header,
           padding: isScrolled ? '0.75rem 0' : '1.2rem 0',
-          background: isScrolled ? 'rgba(255, 253, 250, 0.96)' : 'rgba(255, 253, 250, 0.85)',
-          boxShadow: isScrolled ? '0 10px 30px rgba(44, 31, 29, 0.08)' : 'none',
+          background: isScrolled ? 'var(--color-header-scrolled)' : 'var(--color-header-bg)',
+          boxShadow: isScrolled ? 'var(--shadow-md)' : 'none',
         }}
       >
         <div className="container" style={styles.navContainer}>
@@ -85,7 +86,7 @@ const Navbar = ({ onOpenBooking }) => {
                 className={({ isActive }) => (isActive ? 'active-nav-item' : '')}
                 style={({ isActive }) => ({
                   ...styles.navLink,
-                  color: isActive ? '#9c6644' : '#2c1f1d',
+                  color: isActive ? '#9c6644' : 'var(--color-dark)',
                   fontWeight: isActive ? '600' : '400',
                   borderBottom: isActive ? '2px solid #d4a373' : '2px solid transparent',
                 })}
@@ -95,8 +96,9 @@ const Navbar = ({ onOpenBooking }) => {
             ))}
           </nav>
 
-          {/* Desktop CTA Button */}
-          <div className="nav-desktop-cta" style={styles.desktopCta}>
+          {/* Desktop CTA Button & Theme Toggle */}
+          <div className="nav-desktop-cta" style={{ display: 'flex', alignItems: 'center', gap: '0.8rem' }}>
+            <ThemeToggle />
             <button
               onClick={() => onOpenBooking()}
               className="btn btn-gold btn-sm"
@@ -106,20 +108,22 @@ const Navbar = ({ onOpenBooking }) => {
             </button>
           </div>
 
-          {/* Mobile Menu Toggle Button */}
-          <button
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="nav-hamburger-btn"
-            style={styles.hamburgerBtn}
-            aria-label="Toggle Navigation Menu"
-          >
-            {mobileMenuOpen ? <X size={26} color="#2c1f1d" /> : <Menu size={26} color="#2c1f1d" />}
-          </button>
+          {/* Mobile Actions: Theme Switcher & Hamburger Toggle */}
+          <div className="nav-hamburger-btn" style={{ alignItems: 'center', gap: '0.5rem' }}>
+            <ThemeToggle compact />
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              style={styles.hamburgerBtn}
+              aria-label="Toggle Navigation Menu"
+            >
+              {mobileMenuOpen ? <X size={26} color="var(--color-dark)" /> : <Menu size={26} color="var(--color-dark)" />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Navigation Drawer */}
         {mobileMenuOpen && (
-          <div style={styles.mobileDrawer}>
+          <div className="mobile-drawer-bg" style={styles.mobileDrawer}>
             <nav style={styles.mobileNavList}>
               {navLinks.map((link) => (
                 <NavLink
@@ -127,7 +131,7 @@ const Navbar = ({ onOpenBooking }) => {
                   to={link.path}
                   style={({ isActive }) => ({
                     ...styles.mobileNavLink,
-                    color: isActive ? '#9c6644' : '#2c1f1d',
+                    color: isActive ? '#9c6644' : 'var(--color-dark)',
                     fontWeight: isActive ? '600' : '400',
                     backgroundColor: isActive ? 'rgba(212, 163, 115, 0.12)' : 'transparent',
                   })}
@@ -135,7 +139,8 @@ const Navbar = ({ onOpenBooking }) => {
                   {link.label}
                 </NavLink>
               ))}
-              <div style={{ padding: '1rem 0' }}>
+              <div style={{ padding: '1rem 0', display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
+                <ThemeToggle />
                 <button
                   onClick={() => {
                     setMobileMenuOpen(false);

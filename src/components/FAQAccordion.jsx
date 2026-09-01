@@ -21,12 +21,12 @@ const FAQAccordion = () => {
               aria-expanded={isOpen}
             >
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.8rem' }}>
-                <HelpCircle size={18} color="#9c6644" style={{ flexShrink: 0 }} />
+                <HelpCircle size={18} color="#d4af37" style={{ flexShrink: 0 }} />
                 <span style={styles.question}>{faq.question}</span>
               </div>
               <ChevronDown
                 size={20}
-                color="#9c6644"
+                color="#d4af37"
                 style={{
                   transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)',
                   transition: 'transform 0.3s ease',
@@ -56,7 +56,8 @@ const styles = {
     gap: '1rem',
   },
   item: {
-    backgroundColor: '#fffdfa',
+    backgroundColor: 'var(--color-card-solid)',
+    border: '1px solid var(--color-border)',
     overflow: 'hidden',
   },
   headerBtn: {
@@ -74,16 +75,16 @@ const styles = {
     fontFamily: "'Playfair Display', serif",
     fontSize: '1.1rem',
     fontWeight: '600',
-    color: '#2c1f1d',
+    color: 'var(--color-dark)',
   },
   body: {
     padding: '0 1.5rem 1.3rem 3.1rem',
-    borderTop: '1px solid rgba(235, 220, 213, 0.4)',
+    borderTop: '1px solid var(--color-border)',
     paddingTop: '0.8rem',
   },
   answer: {
     fontSize: '0.92rem',
-    color: '#5c4642',
+    color: 'var(--color-dark-muted)',
     lineHeight: '1.65',
   },
 };

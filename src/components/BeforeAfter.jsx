@@ -48,7 +48,8 @@ const styles = {
     padding: '1.8rem',
     display: 'flex',
     flexDirection: 'column',
-    backgroundColor: '#fffdfa',
+    backgroundColor: 'var(--color-card-solid)',
+    border: '1px solid var(--color-border)',
   },
   header: {
     marginBottom: '1.2rem',
@@ -56,13 +57,13 @@ const styles = {
   title: {
     fontFamily: "'Playfair Display', serif",
     fontSize: '1.3rem',
-    color: '#2c1f1d',
+    color: 'var(--color-dark)',
     marginTop: '0.5rem',
     marginBottom: '0.3rem',
   },
   desc: {
     fontSize: '0.85rem',
-    color: '#5c4642',
+    color: 'var(--color-dark-muted)',
   },
   visualContainer: {
     display: 'grid',

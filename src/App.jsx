@@ -152,7 +152,7 @@ function App() {
           />
           <Route
             path="/gallery"
-            element={<Gallery />}
+            element={<Gallery onOpenBooking={(s) => handleOpenBooking(s)} />}
           />
           <Route
             path="/offers"

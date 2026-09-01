@@ -93,7 +93,7 @@ const styles = {
   title: {
     fontFamily: "'Playfair Display', serif",
     fontSize: '1.25rem',
-    color: '#2c1f1d',
+    color: 'var(--color-dark)',
     lineHeight: '1.3',
     marginBottom: '0.4rem',
   },
@@ -102,13 +102,13 @@ const styles = {
     alignItems: 'center',
     gap: '0.2rem',
     fontSize: '0.75rem',
-    color: '#9c6644',
+    color: '#d4af37',
     fontWeight: '500',
     flexShrink: 0,
   },
   desc: {
     fontSize: '0.88rem',
-    color: '#5c4642',
+    color: 'var(--color-dark-muted)',
     lineHeight: '1.6',
     marginBottom: '1.5rem',
     flexGrow: 1,
@@ -118,11 +118,11 @@ const styles = {
     alignItems: 'center',
     justifyContent: 'space-between',
     paddingTop: '1rem',
-    borderTop: '1px solid #ebdcd5',
+    borderTop: '1px solid var(--color-border)',
   },
   priceLabel: {
     fontSize: '0.72rem',
-    color: '#5c4642',
+    color: 'var(--color-dark-muted)',
     textTransform: 'uppercase',
     letterSpacing: '0.5px',
     display: 'block',
@@ -131,7 +131,7 @@ const styles = {
     fontFamily: "'Playfair Display', serif",
     fontSize: '1.35rem',
     fontWeight: '700',
-    color: '#9c6644',
+    color: '#d4af37',
   },
 };
 

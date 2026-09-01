@@ -3,8 +3,9 @@ import { Sparkles } from 'lucide-react';
 import SectionTitle from '../components/SectionTitle';
 import GalleryGrid from '../components/GalleryGrid';
 import BeforeAfter from '../components/BeforeAfter';
+import LookStyled3DShowcase from '../components/LookStyled3DShowcase';
 
-const Gallery = () => {
+const Gallery = ({ onOpenBooking }) => {
   return (
     <div>
       {/* Header Banner */}
@@ -19,6 +20,9 @@ const Gallery = () => {
           </p>
         </div>
       </section>
+
+      {/* 3D Video Look Styled Showcase */}
+      <LookStyled3DShowcase onOpenBooking={onOpenBooking} />
 
       {/* Main Gallery Section */}
       <section className="section-padding" style={{ backgroundColor: '#f9f3ef' }}>

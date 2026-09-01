@@ -11,6 +11,8 @@ import BeforeAfter from '../components/BeforeAfter';
 import OfferBanner from '../components/OfferBanner';
 import BookingForm from '../components/BookingForm';
 
+import LookStyled3DShowcase from '../components/LookStyled3DShowcase';
+
 import { servicesData } from '../data/services';
 import { packagesData } from '../data/packages';
 import { businessData } from '../data/business';
@@ -65,6 +67,9 @@ const Home = ({ onOpenBooking, onSelectService, onSelectPackage, onClaimOffer })
     <div>
       {/* Hero Section */}
       <Hero onOpenBooking={onOpenBooking} />
+
+      {/* 3D Video Look Styled Showcase */}
+      <LookStyled3DShowcase onOpenBooking={onOpenBooking} />
 
       {/* Beauty Introduction Section */}
       <section className="section-padding" style={{ backgroundColor: '#fffdfa' }}>
@@ -148,7 +153,7 @@ const Home = ({ onOpenBooking, onSelectService, onSelectPackage, onClaimOffer })
               return (
                 <div key={idx} className="glass-card" style={styles.whyCard}>
                   <div style={styles.whyIconBox}>
-                    <Icon size={24} color="#9c6644" />
+                    <Icon size={24} color="#d4af37" />
                   </div>
                   <h3 style={styles.whyTitle}>{item.title}</h3>
                   <p style={styles.whyDesc}>{item.desc}</p>
@@ -329,35 +334,35 @@ const Home = ({ onOpenBooking, onSelectService, onSelectPackage, onClaimOffer })
 
                 <div style={styles.infoList}>
                   <div style={styles.infoItem}>
-                    <MapPin size={22} color="#9c6644" style={{ flexShrink: 0 }} />
+                    <MapPin size={22} color="#d4af37" style={{ flexShrink: 0 }} />
                     <div>
-                      <strong>Address:</strong>
-                      <p style={{ color: '#5c4642', fontSize: '0.9rem' }}>{businessData.address}</p>
+                      <strong style={{ color: 'var(--color-dark)', fontSize: '0.95rem' }}>Address:</strong>
+                      <p style={{ color: 'var(--color-dark-muted)', fontSize: '0.9rem' }}>{businessData.address}</p>
                     </div>
                   </div>
 
                   <div style={styles.infoItem}>
-                    <Phone size={22} color="#9c6644" style={{ flexShrink: 0 }} />
+                    <Phone size={22} color="#d4af37" style={{ flexShrink: 0 }} />
                     <div>
-                      <strong>Phone & WhatsApp:</strong>
-                      <p style={{ color: '#5c4642', fontSize: '0.9rem' }}>{businessData.phone}</p>
+                      <strong style={{ color: 'var(--color-dark)', fontSize: '0.95rem' }}>Phone & WhatsApp:</strong>
+                      <p style={{ color: 'var(--color-dark-muted)', fontSize: '0.9rem' }}>{businessData.phone}</p>
                     </div>
                   </div>
 
                   <div style={styles.infoItem}>
-                    <Mail size={22} color="#9c6644" style={{ flexShrink: 0 }} />
+                    <Mail size={22} color="#d4af37" style={{ flexShrink: 0 }} />
                     <div>
-                      <strong>Email:</strong>
-                      <p style={{ color: '#5c4642', fontSize: '0.9rem' }}>{businessData.email}</p>
+                      <strong style={{ color: 'var(--color-dark)', fontSize: '0.95rem' }}>Email:</strong>
+                      <p style={{ color: 'var(--color-dark-muted)', fontSize: '0.9rem' }}>{businessData.email}</p>
                     </div>
                   </div>
 
                   <div style={styles.infoItem}>
-                    <Clock size={22} color="#9c6644" style={{ flexShrink: 0 }} />
+                    <Clock size={22} color="#d4af37" style={{ flexShrink: 0 }} />
                     <div>
-                      <strong>Opening Hours:</strong>
-                      <p style={{ color: '#5c4642', fontSize: '0.88rem' }}>{businessData.openingHours.weekdays}</p>
-                      <p style={{ color: '#5c4642', fontSize: '0.88rem' }}>{businessData.openingHours.sunday}</p>
+                      <strong style={{ color: 'var(--color-dark)', fontSize: '0.95rem' }}>Opening Hours:</strong>
+                      <p style={{ color: 'var(--color-dark-muted)', fontSize: '0.88rem' }}>{businessData.openingHours.weekdays}</p>
+                      <p style={{ color: 'var(--color-dark-muted)', fontSize: '0.88rem' }}>{businessData.openingHours.sunday}</p>
                     </div>
                   </div>
                 </div>
@@ -427,15 +432,16 @@ const styles = {
   },
   whyCard: {
     padding: '2rem',
-    backgroundColor: '#fffdfa',
+    backgroundColor: 'var(--color-card-solid)',
+    border: '1px solid var(--color-border)',
     transition: 'transform 0.3s ease',
   },
   whyIconBox: {
     width: '52px',
     height: '52px',
     borderRadius: '16px',
-    backgroundColor: '#fdf5f2',
-    border: '1px solid #f7d6cd',
+    backgroundColor: 'var(--color-input-bg)',
+    border: '1px solid var(--color-border)',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
@@ -444,12 +450,12 @@ const styles = {
   whyTitle: {
     fontFamily: "'Playfair Display', serif",
     fontSize: '1.3rem',
-    color: '#2c1f1d',
+    color: 'var(--color-dark)',
     marginBottom: '0.5rem',
   },
   whyDesc: {
     fontSize: '0.9rem',
-    color: '#5c4642',
+    color: 'var(--color-dark-muted)',
     lineHeight: '1.6',
   },
   packagesGrid: {
@@ -536,17 +542,18 @@ const styles = {
   },
   contactInfoCard: {
     padding: '2.2rem',
-    backgroundColor: '#fffdfa',
+    backgroundColor: 'var(--color-card-solid)',
+    border: '1px solid var(--color-border)',
   },
   contactCardTitle: {
     fontFamily: "'Playfair Display', serif",
     fontSize: '1.6rem',
-    color: '#2c1f1d',
+    color: 'var(--color-dark)',
     marginBottom: '0.5rem',
   },
   contactCardDesc: {
     fontSize: '0.9rem',
-    color: '#5c4642',
+    color: 'var(--color-dark-muted)',
     marginBottom: '1.8rem',
   },
   infoList: {

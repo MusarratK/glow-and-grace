@@ -162,7 +162,8 @@ const styles = {
     overflow: 'hidden',
     display: 'flex',
     flexDirection: 'column',
-    backgroundColor: '#fffdfa',
+    backgroundColor: 'var(--color-card-solid)',
+    border: '1px solid var(--color-border)',
   },
   imgBox: {
     height: '220px',
@@ -176,12 +177,12 @@ const styles = {
   cardTitle: {
     fontFamily: "'Playfair Display', serif",
     fontSize: '1.3rem',
-    color: '#2c1f1d',
+    color: 'var(--color-dark)',
     marginBottom: '0.4rem',
   },
   cardDesc: {
     fontSize: '0.88rem',
-    color: '#5c4642',
+    color: 'var(--color-dark-muted)',
     lineHeight: '1.6',
     marginBottom: '1.5rem',
     flexGrow: 1,
@@ -191,13 +192,13 @@ const styles = {
     justifyContent: 'space-between',
     alignItems: 'center',
     paddingTop: '1rem',
-    borderTop: '1px solid #ebdcd5',
+    borderTop: '1px solid var(--color-border)',
   },
   price: {
     fontFamily: "'Playfair Display', serif",
     fontSize: '1.3rem',
     fontWeight: '700',
-    color: '#9c6644',
+    color: '#d4af37',
   },
   timelineGrid: {
     display: 'grid',
@@ -206,12 +207,13 @@ const styles = {
   },
   timelineBox: {
     padding: '2rem',
-    backgroundColor: '#fffdfa',
+    backgroundColor: 'var(--color-card-solid)',
+    border: '1px solid var(--color-border)',
   },
   stepBadge: {
     fontSize: '0.75rem',
     fontWeight: '700',
-    color: '#9c6644',
+    color: '#d4af37',
     letterSpacing: '1.5px',
     display: 'block',
     marginBottom: '0.5rem',
@@ -219,12 +221,12 @@ const styles = {
   stepTitle: {
     fontFamily: "'Playfair Display', serif",
     fontSize: '1.3rem',
-    color: '#2c1f1d',
+    color: 'var(--color-dark)',
     marginBottom: '0.5rem',
   },
   stepDesc: {
     fontSize: '0.88rem',
-    color: '#5c4642',
+    color: 'var(--color-dark-muted)',
     lineHeight: '1.6',
   },
 };

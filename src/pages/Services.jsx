@@ -52,9 +52,9 @@ const Services = ({ onSelectService }) => {
                   onClick={() => setActiveTab(cat.id)}
                   style={{
                     ...styles.tabBtn,
-                    backgroundColor: activeTab === cat.id ? '#2c1f1d' : '#fffdfa',
-                    color: activeTab === cat.id ? '#fffdfa' : '#2c1f1d',
-                    borderColor: activeTab === cat.id ? '#2c1f1d' : '#ebdcd5',
+                    backgroundColor: activeTab === cat.id ? 'var(--color-dark)' : 'var(--color-input-bg)',
+                    color: activeTab === cat.id ? 'var(--color-nude)' : 'var(--color-dark)',
+                    borderColor: activeTab === cat.id ? 'var(--color-dark)' : 'var(--color-border)',
                   }}
                 >
                   {cat.label}
@@ -64,7 +64,7 @@ const Services = ({ onSelectService }) => {
 
             {/* Search input */}
             <div style={styles.searchBox}>
-              <Search size={18} color="#9c6644" style={{ flexShrink: 0 }} />
+              <Search size={18} color="#d4af37" style={{ flexShrink: 0 }} />
               <input
                 type="text"
                 placeholder="Search services (e.g. Facial, Keratin, Makeup)..."
@@ -156,8 +156,8 @@ const styles = {
     display: 'flex',
     alignItems: 'center',
     gap: '0.6rem',
-    backgroundColor: '#fffdfa',
-    border: '1px solid #ebdcd5',
+    backgroundColor: 'var(--color-card-solid)',
+    border: '1px solid var(--color-border)',
     borderRadius: '9999px',
     padding: '0.5rem 1.2rem',
     maxWidth: '450px',
@@ -171,12 +171,12 @@ const styles = {
     fontSize: '0.9rem',
     fontFamily: "'Poppins', sans-serif",
     backgroundColor: 'transparent',
-    color: '#2c1f1d',
+    color: 'var(--color-dark)',
   },
   resultCount: {
     marginBottom: '1.5rem',
     fontSize: '0.88rem',
-    color: '#5c4642',
+    color: 'var(--color-dark-muted)',
   },
   grid: {
     display: 'grid',
@@ -186,9 +186,9 @@ const styles = {
   emptyState: {
     textAlign: 'center',
     padding: '4rem 1rem',
-    backgroundColor: '#fffdfa',
+    backgroundColor: 'var(--color-card-solid)',
     borderRadius: '16px',
-    border: '1px solid #ebdcd5',
+    border: '1px solid var(--color-border)',
   },
 };
 

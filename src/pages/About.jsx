@@ -2,6 +2,7 @@ import React from 'react';
 import { Sparkles, ShieldCheck, Heart, Award, CheckCircle, Users } from 'lucide-react';
 import SectionTitle from '../components/SectionTitle';
 import FAQAccordion from '../components/FAQAccordion';
+import LiveCounter from '../components/LiveCounter';
 import { businessData } from '../data/business';
 
 const About = ({ onOpenBooking }) => {
@@ -86,13 +87,20 @@ const About = ({ onOpenBooking }) => {
         </div>
       </section>
 
-      {/* Stats Banner */}
+      {/* Stats Banner with Live Counter */}
       <section style={styles.statsSection}>
         <div className="container">
           <div style={styles.statsGrid}>
             {businessData.stats.map((st, i) => (
               <div key={i} style={styles.statBox}>
-                <div style={styles.statValue}>{st.value}</div>
+                <div style={styles.statValue}>
+                  <LiveCounter
+                    target={st.target}
+                    suffix={st.suffix}
+                    decimals={st.decimals || 0}
+                    duration={2200}
+                  />
+                </div>
                 <div style={styles.statLabel}>{st.label}</div>
               </div>
             ))}
@@ -168,7 +176,7 @@ const styles = {
   },
   textParagraph: {
     fontSize: '1.02rem',
-    color: '#5c4642',
+    color: 'var(--color-dark-muted)',
     lineHeight: '1.75',
     marginBottom: '1rem',
   },
@@ -183,7 +191,7 @@ const styles = {
     alignItems: 'center',
     gap: '0.8rem',
     fontSize: '0.95rem',
-    color: '#2c1f1d',
+    color: 'var(--color-dark)',
     fontWeight: '500',
   },
   aboutImgFrame: {
@@ -227,7 +235,8 @@ const styles = {
   },
   teamCard: {
     overflow: 'hidden',
-    backgroundColor: '#fffdfa',
+    backgroundColor: 'var(--color-card-solid)',
+    border: '1px solid var(--color-border)',
   },
   teamImgWrapper: {
     height: '300px',
@@ -241,19 +250,19 @@ const styles = {
   teamName: {
     fontFamily: "'Playfair Display', serif",
     fontSize: '1.3rem',
-    color: '#2c1f1d',
+    color: 'var(--color-dark)',
     marginBottom: '0.2rem',
   },
   teamRole: {
     fontSize: '0.88rem',
-    color: '#9c6644',
+    color: '#d4af37',
     fontWeight: '600',
     marginBottom: '0.5rem',
   },
   teamExp: {
     fontSize: '0.78rem',
-    color: '#5c4642',
-    backgroundColor: '#fdf5f2',
+    color: 'var(--color-dark-muted)',
+    backgroundColor: 'var(--color-input-bg)',
     padding: '0.2rem 0.6rem',
     borderRadius: '4px',
   },

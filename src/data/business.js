@@ -34,10 +34,10 @@ export const businessData = {
 
   // Trust Stats
   stats: [
-    { label: "Years Experience", value: "5+" },
-    { label: "Happy Clients", value: "1,000+" },
-    { label: "Beauty Services", value: "30+" },
-    { label: "Rating Score", value: "4.9★" },
+    { label: "Years Experience", value: "5+", target: 5, suffix: "+" },
+    { label: "Happy Clients", value: "1,000+", target: 1000, suffix: "+" },
+    { label: "Beauty Services", value: "30+", target: 30, suffix: "+" },
+    { label: "Rating Score", value: "4.9★", target: 4.9, suffix: "★", decimals: 1 },
   ],
 
   // Social Links

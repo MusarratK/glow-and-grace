@@ -45,14 +45,14 @@ const TestimonialSlider = () => {
           <img src={current.avatar} alt={current.name} style={styles.avatar} />
           <div>
             <h4 style={styles.authorName}>{current.name}</h4>
-            <p style={styles.authorDetails}>{current.location} • <span style={{ color: '#9c6644' }}>{current.service}</span></p>
+            <p style={styles.authorDetails}>{current.location} • <span style={{ color: '#d4af37' }}>{current.service}</span></p>
           </div>
         </div>
 
         {/* Controls */}
         <div style={styles.controlsRow}>
           <button onClick={prevSlide} style={styles.arrowBtn} aria-label="Previous Testimonial">
-            <ChevronLeft size={20} color="#2c1f1d" />
+            <ChevronLeft size={20} color="var(--color-dark)" />
           </button>
           
           <div style={styles.dotsRow}>
@@ -62,7 +62,7 @@ const TestimonialSlider = () => {
                 onClick={() => setCurrentIndex(idx)}
                 style={{
                   ...styles.dot,
-                  backgroundColor: idx === currentIndex ? '#9c6644' : '#ebdcd5',
+                  backgroundColor: idx === currentIndex ? '#d4af37' : 'var(--color-border)',
                   width: idx === currentIndex ? '24px' : '8px',
                 }}
                 aria-label={`Go to slide ${idx + 1}`}
@@ -71,7 +71,7 @@ const TestimonialSlider = () => {
           </div>
 
           <button onClick={nextSlide} style={styles.arrowBtn} aria-label="Next Testimonial">
-            <ChevronRight size={20} color="#2c1f1d" />
+            <ChevronRight size={20} color="var(--color-dark)" />
           </button>
         </div>
       </div>
@@ -89,7 +89,8 @@ const styles = {
     padding: '3rem 2.5rem 2rem 2.5rem',
     textAlign: 'center',
     position: 'relative',
-    backgroundColor: '#fffdfa',
+    backgroundColor: 'var(--color-card-solid)',
+    border: '1px solid var(--color-border)',
   },
   quoteIcon: {
     position: 'absolute',
@@ -106,7 +107,7 @@ const styles = {
   comment: {
     fontSize: '1.15rem',
     fontStyle: 'italic',
-    color: '#2c1f1d',
+    color: 'var(--color-dark)',
     lineHeight: '1.7',
     marginBottom: '2rem',
   },
@@ -122,31 +123,31 @@ const styles = {
     height: '54px',
     borderRadius: '50%',
     objectFit: 'cover',
-    border: '2px solid #d4a373',
+    border: '2px solid #d4af37',
   },
   authorName: {
     fontFamily: "'Playfair Display', serif",
     fontSize: '1.15rem',
     fontWeight: '700',
-    color: '#2c1f1d',
+    color: 'var(--color-dark)',
   },
   authorDetails: {
     fontSize: '0.82rem',
-    color: '#5c4642',
+    color: 'var(--color-dark-muted)',
   },
   controlsRow: {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-between',
     paddingTop: '1.2rem',
-    borderTop: '1px solid #ebdcd5',
+    borderTop: '1px solid var(--color-border)',
   },
   arrowBtn: {
     width: '40px',
     height: '40px',
     borderRadius: '50%',
-    backgroundColor: '#fdf5f2',
-    border: '1px solid #ebdcd5',
+    backgroundColor: 'var(--color-input-bg)',
+    border: '1px solid var(--color-border)',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',

@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { Calendar, Sparkles, Award, Users, Heart } from 'lucide-react';
+import LiveCounter from './LiveCounter';
 import { businessData } from '../data/business';
 
 const Hero = ({ onOpenBooking }) => {
@@ -39,7 +40,9 @@ const Hero = ({ onOpenBooking }) => {
             <div style={styles.trustBadge}>
               <div style={styles.trustIcon}><Award size={20} color="#9c6644" /></div>
               <div>
-                <strong style={styles.trustVal}>5+ Years</strong>
+                <strong style={styles.trustVal}>
+                  <LiveCounter target={5} suffix="+ Years" />
+                </strong>
                 <span style={styles.trustLbl}>Experience</span>
               </div>
             </div>
@@ -47,7 +50,9 @@ const Hero = ({ onOpenBooking }) => {
             <div style={styles.trustBadge}>
               <div style={styles.trustIcon}><Users size={20} color="#9c6644" /></div>
               <div>
-                <strong style={styles.trustVal}>1,000+</strong>
+                <strong style={styles.trustVal}>
+                  <LiveCounter target={1000} suffix="+" />
+                </strong>
                 <span style={styles.trustLbl}>Happy Clients</span>
               </div>
             </div>
@@ -55,7 +60,9 @@ const Hero = ({ onOpenBooking }) => {
             <div style={styles.trustBadge}>
               <div style={styles.trustIcon}><Sparkles size={20} color="#9c6644" /></div>
               <div>
-                <strong style={styles.trustVal}>30+</strong>
+                <strong style={styles.trustVal}>
+                  <LiveCounter target={30} suffix="+" />
+                </strong>
                 <span style={styles.trustLbl}>Services</span>
               </div>
             </div>
@@ -115,12 +122,12 @@ const styles = {
   },
   highlightText: {
     fontStyle: 'italic',
-    color: '#9c6644',
+    color: '#d4af37',
     position: 'relative',
   },
   subheading: {
     fontSize: '1.1rem',
-    color: '#5c4642',
+    color: 'var(--color-dark-muted)',
     maxWidth: '560px',
     lineHeight: '1.7',
     marginBottom: '2.2rem',
@@ -138,7 +145,7 @@ const styles = {
     gap: '2rem',
     flexWrap: 'wrap',
     paddingTop: '1.5rem',
-    borderTop: '1px solid #ebdcd5',
+    borderTop: '1px solid var(--color-border)',
   },
   trustBadge: {
     display: 'flex',
@@ -149,8 +156,8 @@ const styles = {
     width: '40px',
     height: '40px',
     borderRadius: '50%',
-    backgroundColor: '#fffdfa',
-    border: '1px solid #ebdcd5',
+    backgroundColor: 'var(--color-input-bg)',
+    border: '1px solid var(--color-border)',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
@@ -159,13 +166,13 @@ const styles = {
     fontFamily: "'Playfair Display', serif",
     fontSize: '1.1rem',
     fontWeight: '700',
-    color: '#2c1f1d',
+    color: 'var(--color-dark)',
     display: 'block',
     lineHeight: '1',
   },
   trustLbl: {
     fontSize: '0.78rem',
-    color: '#5c4642',
+    color: 'var(--color-dark-muted)',
   },
   rightCol: {
     position: 'relative',

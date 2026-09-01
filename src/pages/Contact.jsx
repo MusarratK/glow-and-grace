@@ -157,17 +157,18 @@ const styles = {
     display: 'flex',
     gap: '1.2rem',
     alignItems: 'flex-start',
-    backgroundColor: '#fffdfa',
+    backgroundColor: 'var(--color-card-solid)',
+    border: '1px solid var(--color-border)',
   },
   infoTitle: {
     fontFamily: "'Playfair Display', serif",
     fontSize: '1.15rem',
-    color: '#2c1f1d',
+    color: 'var(--color-dark)',
     marginBottom: '0.2rem',
   },
   infoText: {
     fontSize: '0.9rem',
-    color: '#5c4642',
+    color: 'var(--color-dark-muted)',
     lineHeight: '1.5',
   },
   mapContainer: {

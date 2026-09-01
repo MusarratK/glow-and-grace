@@ -19,13 +19,13 @@ const OfferBanner = ({ onClaimOffer }) => {
 
   return (
     <div style={styles.banner}>
-      <div style={styles.content}>
+      <div className="offer-banner-content" style={styles.content}>
         {/* Badge & Heading */}
         <div style={styles.leftCol}>
           <span className="badge-luxury" style={{ backgroundColor: '#2c1f1d', color: '#d4af37', borderColor: '#d4af37' }}>
             <Gift size={13} /> {specialOfferData.discountBadge}
           </span>
-          <h2 style={styles.title}>{specialOfferData.title}</h2>
+          <h2 className="offer-banner-title" style={styles.title}>{specialOfferData.title}</h2>
           <p style={styles.desc}>{specialOfferData.description}</p>
           
           <div style={styles.codeRow}>
@@ -41,18 +41,18 @@ const OfferBanner = ({ onClaimOffer }) => {
           </div>
 
           <div style={styles.timerRow}>
-            <div style={styles.timeBox}>
-              <span style={styles.timeNum}>{String(hours).padStart(2, '0')}</span>
+            <div className="offer-timer-box" style={styles.timeBox}>
+              <span className="offer-time-num" style={styles.timeNum}>{String(hours).padStart(2, '0')}</span>
               <span style={styles.timeLabel}>HOURS</span>
             </div>
             <span style={styles.colon}>:</span>
-            <div style={styles.timeBox}>
-              <span style={styles.timeNum}>{String(minutes).padStart(2, '0')}</span>
+            <div className="offer-timer-box" style={styles.timeBox}>
+              <span className="offer-time-num" style={styles.timeNum}>{String(minutes).padStart(2, '0')}</span>
               <span style={styles.timeLabel}>MINS</span>
             </div>
             <span style={styles.colon}>:</span>
-            <div style={styles.timeBox}>
-              <span style={styles.timeNum}>{String(seconds).padStart(2, '0')}</span>
+            <div className="offer-timer-box" style={styles.timeBox}>
+              <span className="offer-time-num" style={styles.timeNum}>{String(seconds).padStart(2, '0')}</span>
               <span style={styles.timeLabel}>SECS</span>
             </div>
           </div>
@@ -175,18 +175,5 @@ const styles = {
     color: '#d4af37',
   },
 };
-
-// Responsive style adjustment
-if (typeof document !== 'undefined') {
-  const offerStyle = document.createElement('style');
-  offerStyle.innerHTML = `
-    @media (max-width: 850px) {
-      div[style*="gridTemplateColumns: '1.2fr 0.8fr'"] {
-        grid-template-columns: 1fr !important;
-      }
-    }
-  `;
-  document.head.appendChild(offerStyle);
-}
 
 export default OfferBanner;

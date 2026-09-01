@@ -41,11 +41,11 @@ const Navbar = ({ onOpenBooking }) => {
     <>
       {/* Top Notification Bar */}
       <div style={styles.topBar}>
-        <div className="container" style={styles.topBarContainer}>
+        <div className="container top-bar-container" style={styles.topBarContainer}>
           <div style={styles.topInfo}>
             <span>📍 {businessData.city}, Maharashtra</span>
-            <span style={styles.divider}>|</span>
-            <span>🕐 Mon-Sat: 10AM-8PM, Sun: 11AM-6PM</span>
+            <span className="top-info-divider" style={styles.divider}>|</span>
+            <span className="top-info-hours">🕐 Mon-Sat: 10AM-8PM, Sun: 11AM-6PM</span>
           </div>
           <div style={styles.topActions}>
             <a href={`tel:${businessData.phoneRaw}`} style={styles.phoneLink}>
@@ -71,13 +71,13 @@ const Navbar = ({ onOpenBooking }) => {
               <Sparkles size={20} color="#d4af37" />
             </div>
             <div>
-              <span style={styles.logoTitle}>Glow & Grace</span>
-              <span style={styles.logoSubtitle}>BEAUTY STUDIO</span>
+              <span className="logo-title" style={styles.logoTitle}>Glow & Grace</span>
+              <span className="logo-subtitle" style={styles.logoSubtitle}>BEAUTY STUDIO</span>
             </div>
           </NavLink>
 
           {/* Desktop Nav Links */}
-          <nav style={styles.desktopNav}>
+          <nav className="nav-desktop" style={styles.desktopNav}>
             {navLinks.map((link) => (
               <NavLink
                 key={link.path}
@@ -96,7 +96,7 @@ const Navbar = ({ onOpenBooking }) => {
           </nav>
 
           {/* Desktop CTA Button */}
-          <div style={styles.desktopCta}>
+          <div className="nav-desktop-cta" style={styles.desktopCta}>
             <button
               onClick={() => onOpenBooking()}
               className="btn btn-gold btn-sm"
@@ -109,6 +109,7 @@ const Navbar = ({ onOpenBooking }) => {
           {/* Mobile Menu Toggle Button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="nav-hamburger-btn"
             style={styles.hamburgerBtn}
             aria-label="Toggle Navigation Menu"
           >
@@ -276,18 +277,5 @@ const styles = {
     fontSize: '1rem',
   },
 };
-
-// CSS media query style hook for desktop vs mobile
-if (typeof document !== 'undefined') {
-  const navStyleElement = document.createElement('style');
-  navStyleElement.innerHTML = `
-    @media (max-width: 991px) {
-      header nav { display: none !important; }
-      header div[style*="desktopCta"] { display: none !important; }
-      header button[style*="hamburgerBtn"] { display: flex !important; }
-    }
-  `;
-  document.head.appendChild(navStyleElement);
-}
 
 export default Navbar;

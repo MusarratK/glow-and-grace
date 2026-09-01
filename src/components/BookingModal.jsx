@@ -14,8 +14,8 @@ const BookingModal = ({ isOpen, onClose, preselectedService, preselectedPackage 
   }, [onClose]);
 
   return (
-    <div style={styles.overlay} onClick={onClose}>
-      <div style={styles.modal} onClick={(e) => e.stopPropagation()}>
+    <div className="modal-overlay" style={styles.overlay} onClick={onClose}>
+      <div className="modal-content" style={styles.modal} onClick={(e) => e.stopPropagation()}>
         <button style={styles.closeBtn} onClick={onClose} aria-label="Close Booking Modal">
           <X size={22} color="#2c1f1d" />
         </button>

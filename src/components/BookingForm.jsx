@@ -125,7 +125,7 @@ const BookingForm = ({ preselectedService = '', preselectedPackage = '', onClose
   };
 
   return (
-    <div style={styles.container}>
+    <div className="booking-form-container" style={styles.container}>
       {submitted ? (
         <div style={styles.successState}>
           <div style={styles.successIcon}>
@@ -171,7 +171,7 @@ const BookingForm = ({ preselectedService = '', preselectedPackage = '', onClose
           </div>
 
           {/* Quick Instant Options Bar */}
-          <div style={styles.quickOptions}>
+          <div className="quick-options-grid" style={styles.quickOptions}>
             <a
               href={`https://wa.me/${businessData.whatsappRaw}`}
               target="_blank"
@@ -190,7 +190,7 @@ const BookingForm = ({ preselectedService = '', preselectedPackage = '', onClose
           </div>
 
           {/* Input Grid */}
-          <div style={styles.grid}>
+          <div className="booking-form-inputs-grid" style={styles.grid}>
             {/* Full Name */}
             <div style={styles.field}>
               <label style={styles.label}>Full Name *</label>
@@ -338,7 +338,7 @@ const BookingForm = ({ preselectedService = '', preselectedPackage = '', onClose
           </div>
 
           {/* Action Buttons: Email & WhatsApp */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1rem', marginTop: '1.5rem' }}>
+          <div className="booking-form-action-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1rem', marginTop: '1.5rem' }}>
             <button
               type="submit"
               disabled={isSending}

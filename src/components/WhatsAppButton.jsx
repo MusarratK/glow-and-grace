@@ -11,13 +11,14 @@ const WhatsAppButton = () => {
       href={whatsappUrl}
       target="_blank"
       rel="noopener noreferrer"
+      className="whatsapp-float-btn"
       style={styles.floatingBtn}
       aria-label="Chat on WhatsApp"
       title="Book on WhatsApp"
     >
       <div style={styles.pulseBg} />
       <MessageCircle size={28} color="#ffffff" fill="#ffffff" />
-      <span style={styles.tooltip}>Book via WhatsApp</span>
+      <span className="whatsapp-tooltip" style={styles.tooltip}>Book via WhatsApp</span>
     </a>
   );
 };

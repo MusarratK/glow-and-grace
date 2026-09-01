@@ -34,13 +34,13 @@ const Bridal = ({ onOpenBooking }) => {
   return (
     <div>
       {/* Header Banner */}
-      <section style={styles.headerBanner}>
+      <section className="page-header-banner" style={styles.headerBanner}>
         <div className="container" style={{ textAlign: 'center' }}>
           <span className="badge-luxury" style={{ backgroundColor: '#fffdfa', color: '#2c1f1d', borderColor: '#d4af37' }}>
             <Sparkles size={13} /> ROYAL BRIDAL STUDIO PUNE
           </span>
-          <h1 style={styles.headerTitle}>Your Big Day Deserves Your Best Look</h1>
-          <p style={styles.headerDesc}>
+          <h1 className="page-header-title" style={styles.headerTitle}>Your Big Day Deserves Your Best Look</h1>
+          <p className="page-header-desc" style={styles.headerDesc}>
             From glowing skin preparation to flawless bridal makeup and elegant hairstyling, our bridal beauty services are designed to make you feel unforgettable on your special day.
           </p>
 
@@ -61,7 +61,7 @@ const Bridal = ({ onOpenBooking }) => {
             description="Customized looks for Wedding Day, Sangeet, Engagement, and Reception."
           />
 
-          <div style={styles.grid}>
+          <div className="bridal-menu-grid" style={styles.grid}>
             {bridalServices.map((item, idx) => (
               <div key={idx} className="glass-card" style={styles.card}>
                 <div style={styles.imgBox}>
@@ -96,7 +96,7 @@ const Bridal = ({ onOpenBooking }) => {
             description="Our structured countdown plan to ensure your skin achieves peak radiance for the wedding."
           />
 
-          <div style={styles.timelineGrid}>
+          <div className="timeline-grid" style={styles.timelineGrid}>
             <div className="glass-card" style={styles.timelineBox}>
               <span style={styles.stepBadge}>1 MONTH BEFORE</span>
               <h3 style={styles.stepTitle}>Skin Analysis & Deep Hydration</h3>

@@ -8,14 +8,14 @@ const Hero = ({ onOpenBooking }) => {
     <section style={styles.heroSection}>
       <div style={styles.bgOverlay} />
 
-      <div className="container" style={styles.heroContainer}>
+      <div className="container hero-grid" style={styles.heroContainer}>
         {/* Left Column: Copywriting & CTAs */}
         <div style={styles.leftCol}>
           <span className="badge-luxury" style={{ marginBottom: '1.2rem' }}>
             <Sparkles size={13} /> {businessData.city}'S PREMIER BEAUTY STUDIO
           </span>
 
-          <h1 style={styles.heading}>
+          <h1 className="hero-heading" style={styles.heading}>
             Enhance Your Beauty, <br />
             <span style={styles.highlightText}>Celebrate Yourself</span>
           </h1>
@@ -24,7 +24,7 @@ const Hero = ({ onOpenBooking }) => {
             Professional beauty, hair, skincare, and makeup services designed to make you look and feel your absolute best in a luxury hygienic space.
           </p>
 
-          <div style={styles.btnGroup}>
+          <div className="hero-btn-group" style={styles.btnGroup}>
             <button onClick={onOpenBooking} className="btn btn-gold btn-lg">
               <Calendar size={18} /> Book an Appointment
             </button>
@@ -35,7 +35,7 @@ const Hero = ({ onOpenBooking }) => {
           </div>
 
           {/* Trust Indicators */}
-          <div style={styles.trustRow}>
+          <div className="trust-row" style={styles.trustRow}>
             <div style={styles.trustBadge}>
               <div style={styles.trustIcon}><Award size={20} color="#9c6644" /></div>
               <div>
@@ -64,10 +64,11 @@ const Hero = ({ onOpenBooking }) => {
 
         {/* Right Column: Visual Showcase Frame */}
         <div style={styles.rightCol}>
-          <div style={styles.imageFrame} className="animate-float">
+          <div style={styles.imageFrame} className="hero-image-frame animate-float">
             <img
               src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&q=80&w=1000"
               alt="Glow & Grace Beauty Studio Interior"
+              className="hero-image"
               style={styles.heroImage}
             />
             <div style={styles.decorativeBadge}>
@@ -198,21 +199,5 @@ const styles = {
     boxShadow: '0 8px 20px rgba(0,0,0,0.1)',
   },
 };
-
-// Responsive style adjustment
-if (typeof document !== 'undefined') {
-  const heroStyle = document.createElement('style');
-  heroStyle.innerHTML = `
-    @media (max-width: 991px) {
-      div[style*="gridTemplateColumns: '1.1fr 0.9fr'"] {
-        grid-template-columns: 1fr !important;
-      }
-      h1[style*="fontSize: '3.6rem'"] {
-        font-size: 2.6rem !important;
-      }
-    }
-  `;
-  document.head.appendChild(heroStyle);
-}
 
 export default Hero;

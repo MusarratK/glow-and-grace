@@ -12,10 +12,10 @@ export const businessData = {
   state: "Maharashtra",
   country: "India",
   address: "Phoenix Marketcity, Viman Nagar, Pune, Maharashtra 411014",
-  phone: "+91 75587 41799 / 8805629179",
-  phoneRaw: "917558741799",
+  phone: "+91 88056 29179 / 75587 41799",
+  phoneRaw: "918805629179",
   whatsapp: "+91 75587 41799",
-  whatsappRaw: "917558741799",
+  whatsappRaw: "918805629179",
   email: "ersonaldamodar98@gmail.com",
 
   // Optional WhatsApp API Gateway Endpoint for 15-Minute Automated Scheduling to Owner Phone

@@ -9,13 +9,13 @@ const Contact = () => {
   return (
     <div>
       {/* Header Banner */}
-      <section style={styles.headerBanner}>
+      <section className="page-header-banner" style={styles.headerBanner}>
         <div className="container" style={{ textAlign: 'center' }}>
           <span className="badge-luxury" style={{ backgroundColor: '#2c1f1d', color: '#d4af37', borderColor: '#d4af37' }}>
             <Sparkles size={13} /> GET IN TOUCH
           </span>
-          <h1 style={styles.headerTitle}>Let's Make You Feel Beautiful</h1>
-          <p style={styles.headerDesc}>
+          <h1 className="page-header-title" style={styles.headerTitle}>Let's Make You Feel Beautiful</h1>
+          <p className="page-header-desc" style={styles.headerDesc}>
             Book an appointment online, call our reception desk, or visit our studio in Pune.
           </p>
         </div>
@@ -24,7 +24,7 @@ const Contact = () => {
       {/* Contact Grid & Booking Form */}
       <section className="section-padding" style={{ backgroundColor: '#fffdfa' }}>
         <div className="container">
-          <div style={styles.contactGrid}>
+          <div className="contact-grid" style={styles.contactGrid}>
             {/* Left: Contact Info & Action Buttons */}
             <div>
               <span className="section-subtitle">VISIT US IN PUNE</span>
@@ -177,15 +177,5 @@ const styles = {
     border: '2px solid #ebdcd5',
   },
 };
-
-if (typeof document !== 'undefined') {
-  const contactStyle = document.createElement('style');
-  contactStyle.innerHTML = `
-    @media (max-width: 991px) {
-      div[style*="contactGrid"] { grid-template-columns: 1fr !important; }
-    }
-  `;
-  document.head.appendChild(contactStyle);
-}
 
 export default Contact;

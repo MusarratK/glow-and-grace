@@ -8,13 +8,13 @@ const Offers = ({ onClaimOffer }) => {
   return (
     <div>
       {/* Header Banner */}
-      <section style={styles.headerBanner}>
+      <section className="page-header-banner" style={styles.headerBanner}>
         <div className="container" style={{ textAlign: 'center' }}>
           <span className="badge-luxury" style={{ backgroundColor: '#2c1f1d', color: '#d4af37', borderColor: '#d4af37' }}>
             <Gift size={13} /> SPECIAL DISCOUNTS & DEALS
           </span>
-          <h1 style={styles.headerTitle}>Glow More, Spend Less</h1>
-          <p style={styles.headerDesc}>
+          <h1 className="page-header-title" style={styles.headerTitle}>Glow More, Spend Less</h1>
+          <p className="page-header-desc" style={styles.headerDesc}>
             Enjoy exclusive promotional offers, seasonal discount vouchers, and package deals.
           </p>
         </div>
@@ -36,7 +36,7 @@ const Offers = ({ onClaimOffer }) => {
             description="Use any of the valid promo codes below when requesting your salon appointment."
           />
 
-          <div style={styles.vouchersGrid}>
+          <div className="vouchers-grid" style={styles.vouchersGrid}>
             {activeVouchers.map(v => (
               <div key={v.id} className="glass-card" style={styles.voucherCard}>
                 <div style={styles.discountBadge}>

@@ -8,13 +8,13 @@ const Gallery = () => {
   return (
     <div>
       {/* Header Banner */}
-      <section style={styles.headerBanner}>
+      <section className="page-header-banner" style={styles.headerBanner}>
         <div className="container" style={{ textAlign: 'center' }}>
           <span className="badge-luxury" style={{ backgroundColor: '#2c1f1d', color: '#d4af37', borderColor: '#d4af37' }}>
             <Sparkles size={13} /> STUDIO PORTFOLIO
           </span>
-          <h1 style={styles.headerTitle}>Beauty Photo Gallery</h1>
-          <p style={styles.headerDesc}>
+          <h1 className="page-header-title" style={styles.headerTitle}>Beauty Photo Gallery</h1>
+          <p className="page-header-desc" style={styles.headerDesc}>
             Filter through our high-definition portfolio of bridal makeups, hair color balayage, gold facials, and gel nail art.
           </p>
         </div>

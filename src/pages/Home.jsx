@@ -69,7 +69,7 @@ const Home = ({ onOpenBooking, onSelectService, onSelectPackage, onClaimOffer })
       {/* Beauty Introduction Section */}
       <section className="section-padding" style={{ backgroundColor: '#fffdfa' }}>
         <div className="container">
-          <div style={styles.introGrid}>
+          <div className="intro-grid" style={styles.introGrid}>
             <div style={styles.introImageCol}>
               <div style={styles.introImageFrame}>
                 <img
@@ -115,7 +115,7 @@ const Home = ({ onOpenBooking, onSelectService, onSelectPackage, onClaimOffer })
             description="Explore our wide range of professional hair, skin, facial, makeup, nail, and body grooming treatments."
           />
 
-          <div style={styles.cardsGrid}>
+          <div className="cards-grid" style={styles.cardsGrid}>
             {featuredServices.map(service => (
               <ServiceCard
                 key={service.id}
@@ -142,7 +142,7 @@ const Home = ({ onOpenBooking, onSelectService, onSelectPackage, onClaimOffer })
             description="Experience luxury beauty treatments engineered around safety, hygiene, skill, and pure relaxation."
           />
 
-          <div style={styles.whyGrid}>
+          <div className="why-grid" style={styles.whyGrid}>
             {whyChooseItems.map((item, idx) => {
               const Icon = item.icon;
               return (
@@ -168,7 +168,7 @@ const Home = ({ onOpenBooking, onSelectService, onSelectPackage, onClaimOffer })
             description="Curated value bundles designed to give you comprehensive head-to-toe pampering at attractive rates."
           />
 
-          <div style={styles.packagesGrid}>
+          <div className="packages-grid" style={styles.packagesGrid}>
             {packagesData.map(pkg => (
               <PackageCard
                 key={pkg.id}
@@ -183,7 +183,7 @@ const Home = ({ onOpenBooking, onSelectService, onSelectPackage, onClaimOffer })
       {/* Bridal Showcase Banner */}
       <section style={styles.bridalBannerSection}>
         <div className="container">
-          <div style={styles.bridalGrid}>
+          <div className="bridal-grid" style={styles.bridalGrid}>
             <div>
               <span className="badge-luxury" style={{ backgroundColor: '#2c1f1d', color: '#d4af37', borderColor: '#d4af37', marginBottom: '1rem' }}>
                 <Sparkles size={14} /> ROYAL BRIDAL EXPERTISE
@@ -280,7 +280,7 @@ const Home = ({ onOpenBooking, onSelectService, onSelectPackage, onClaimOffer })
             description="Stay connected on Instagram for daily beauty tips, behind-the-scenes transformations, and special announcements."
           />
 
-          <div style={styles.instaGrid}>
+          <div className="insta-grid" style={styles.instaGrid}>
             {instagramPosts.map((imgUrl, i) => (
               <a
                 key={i}
@@ -319,7 +319,7 @@ const Home = ({ onOpenBooking, onSelectService, onSelectPackage, onClaimOffer })
             description="Book your appointment online or reach out directly to our team in Pune."
           />
 
-          <div style={styles.bookingSectionGrid}>
+          <div className="booking-section-grid" style={styles.bookingSectionGrid}>
             <div>
               <div className="glass-card" style={styles.contactInfoCard}>
                 <h3 style={styles.contactCardTitle}>Visit Our Studio</h3>

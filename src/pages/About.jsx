@@ -29,13 +29,13 @@ const About = ({ onOpenBooking }) => {
   return (
     <div>
       {/* Page Header */}
-      <section style={styles.headerBanner}>
+      <section className="page-header-banner" style={styles.headerBanner}>
         <div className="container" style={{ textAlign: 'center' }}>
           <span className="badge-luxury" style={{ backgroundColor: '#2c1f1d', color: '#d4af37', borderColor: '#d4af37' }}>
             <Sparkles size={13} /> ABOUT GLOW & GRACE
           </span>
-          <h1 style={styles.headerTitle}>Empowering Your Confidence Through Beauty</h1>
-          <p style={styles.headerDesc}>
+          <h1 className="page-header-title" style={styles.headerTitle}>Empowering Your Confidence Through Beauty</h1>
+          <p className="page-header-desc" style={styles.headerDesc}>
             Discover Pune's most trusted luxury beauty studio where passion, hygiene, and art converge.
           </p>
         </div>
@@ -44,7 +44,7 @@ const About = ({ onOpenBooking }) => {
       {/* Brand Story & Philosophy */}
       <section className="section-padding" style={{ backgroundColor: '#fffdfa' }}>
         <div className="container">
-          <div style={styles.storyGrid}>
+          <div className="story-grid" style={styles.storyGrid}>
             <div>
               <span className="section-subtitle">OUR PHILOSOPHY</span>
               <h2 className="section-title" style={{ textAlign: 'left', margin: '0 0 1.2rem 0' }}>
@@ -109,7 +109,7 @@ const About = ({ onOpenBooking }) => {
             description="Our team of certified professionals brings years of industry mastery and creative flair to every service."
           />
 
-          <div style={styles.teamGrid}>
+          <div className="team-grid" style={styles.teamGrid}>
             {teamMembers.map((member, i) => (
               <div key={i} className="glass-card" style={styles.teamCard}>
                 <div style={styles.teamImgWrapper}>
@@ -258,15 +258,5 @@ const styles = {
     borderRadius: '4px',
   },
 };
-
-if (typeof document !== 'undefined') {
-  const aboutStyle = document.createElement('style');
-  aboutStyle.innerHTML = `
-    @media (max-width: 850px) {
-      div[style*="storyGrid"] { grid-template-columns: 1fr !important; }
-    }
-  `;
-  document.head.appendChild(aboutStyle);
-}
 
 export default About;

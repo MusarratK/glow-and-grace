@@ -28,13 +28,13 @@ const Services = ({ onSelectService }) => {
   return (
     <div>
       {/* Header Banner */}
-      <section style={styles.headerBanner}>
+      <section className="page-header-banner" style={styles.headerBanner}>
         <div className="container" style={{ textAlign: 'center' }}>
           <span className="badge-luxury" style={{ backgroundColor: '#2c1f1d', color: '#d4af37', borderColor: '#d4af37' }}>
             <Sparkles size={13} /> COMPLETE SERVICE MENU
           </span>
-          <h1 style={styles.headerTitle}>Our Beauty & Wellness Services</h1>
-          <p style={styles.headerDesc}>
+          <h1 className="page-header-title" style={styles.headerTitle}>Our Beauty & Wellness Services</h1>
+          <p className="page-header-desc" style={styles.headerDesc}>
             Explore our curated menu of hair styling, skin facials, HD makeup, gel nails, and waxing treatments.
           </p>
         </div>
@@ -82,7 +82,7 @@ const Services = ({ onSelectService }) => {
 
           {/* Services Grid */}
           {filteredServices.length > 0 ? (
-            <div style={styles.grid}>
+            <div className="cards-grid" style={styles.grid}>
               {filteredServices.map(service => (
                 <ServiceCard
                   key={service.id}

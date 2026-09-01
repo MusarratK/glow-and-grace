@@ -17,13 +17,13 @@ const BeforeAfter = () => {
           </div>
 
           {/* Visual Comparison Split */}
-          <div style={styles.visualContainer}>
+          <div className="before-after-visual-container" style={styles.visualContainer}>
             <div style={styles.imageBox}>
               <span style={styles.labelBefore}>BEFORE</span>
               <img src={item.beforeImg} alt={`${item.title} Before`} style={styles.img} loading="lazy" />
             </div>
 
-            <div style={styles.arrowDivider}>
+            <div className="before-after-arrow" style={styles.arrowDivider}>
               <ArrowRight size={20} color="#9c6644" />
             </div>
 

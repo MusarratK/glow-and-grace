@@ -8,7 +8,7 @@ const Footer = ({ onOpenBooking }) => {
     <footer style={styles.footer}>
       {/* Upper Footer Decor */}
       <div style={styles.topBanner}>
-        <div className="container" style={styles.topBannerContent}>
+        <div className="container footer-top-banner-content" style={styles.topBannerContent}>
           <div>
             <h3 style={{ fontFamily: "'Playfair Display', serif", fontSize: '1.8rem', color: '#fffdfa' }}>
               Ready for a Stunning Beauty Transformation?
@@ -27,7 +27,7 @@ const Footer = ({ onOpenBooking }) => {
 
       {/* Main Footer Grid */}
       <div className="container" style={{ padding: '4rem 1.5rem 3rem 1.5rem' }}>
-        <div style={styles.grid}>
+        <div className="footer-main-grid" style={styles.grid}>
           {/* Column 1: Brand Info */}
           <div style={styles.col}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', marginBottom: '1rem' }}>
@@ -115,7 +115,7 @@ const Footer = ({ onOpenBooking }) => {
         </div>
 
         {/* Bottom Bar */}
-        <div style={styles.bottomBar}>
+        <div className="footer-bottom-bar" style={styles.bottomBar}>
           <p>© {new Date().getFullYear()} {businessData.name}. All Rights Reserved.</p>
           <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
             <span style={{ cursor: 'pointer' }}>Privacy Policy</span>
